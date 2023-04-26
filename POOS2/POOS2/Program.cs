@@ -10,9 +10,14 @@ do
     Console.WriteLine("Ingrese el Salario del Empleado");
     double salario = double.Parse (Console.ReadLine());
 
-    Empleado x = new Empleado(nombre, salario);
+    Console.WriteLine("Ingrese el Puesto del Empleado");
+    string puesto = Console.ReadLine();
 
-    Console.WriteLine($"El ISR del Empleado {x.getNombre()} es de {x.getISR()}");
+    DateTime tmp = new DateTime( 2023, 1, 30 );
+
+    Empleado x = new Empleado(nombre, salario, puesto, tmp);
+
+    Console.WriteLine($"El ISR del Empleado {x.getNombre()} es de {x.getISR()} mas la aportacion del seguro {x.aportacionIHHS()}");
 
 
     Console.WriteLine("Quiere Salir del Programa (Y/N)");
