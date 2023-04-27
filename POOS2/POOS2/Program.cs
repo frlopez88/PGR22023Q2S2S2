@@ -2,6 +2,9 @@
 
 bool salirCiclo = false;
 
+// tipoDato nmVariable =  asignacion;
+
+
 do
 {
     Console.WriteLine("Ingrese el Nombre del Empleado");
@@ -32,3 +35,25 @@ do
 
 
 } while (salirCiclo == false);
+
+
+salirCiclo = false;
+
+do {
+
+    Console.WriteLine("Ingrese el radio del Circulo");
+    double r = double.Parse(Console.ReadLine());
+    Circulo c = new Circulo(r);
+    Console.WriteLine(c.ToString() );
+
+    Console.WriteLine("Quiere Salir del Programa (Y/N)");
+    char salir = char.Parse(Console.ReadLine());
+
+    if (salir == 'Y')
+    {
+
+        salirCiclo = true;
+
+    }
+
+} while (salirCiclo == true);
