@@ -56,4 +56,32 @@ do {
 
     }
 
-} while (salirCiclo == true);
+} while (salirCiclo == false);
+
+
+salirCiclo = false;
+
+do
+{
+    Console.WriteLine("Ingrese el Lado 1");
+    double l1 = double.Parse(Console.ReadLine());
+
+
+    Console.WriteLine("Ingrese el Lado 2");
+    double l2 = double.Parse(Console.ReadLine());
+
+    Cuadrado c1 = new Cuadrado(l1, l2);
+
+    Console.WriteLine(c1.ToString());
+
+    Console.WriteLine("Quiere Salir del Programa (Y/N)");
+    char salir = char.Parse(Console.ReadLine());
+
+    if (salir == 'Y')
+    {
+
+        salirCiclo = true;
+
+    }
+
+} while (salirCiclo == false);
